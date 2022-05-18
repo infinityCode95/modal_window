@@ -1,0 +1,123 @@
+@import "_null.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+
+body {
+    color: black;
+    background-color: white;
+	line-height: 1;
+	font-family: "Open sans";
+    font-size: 16px;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+
+[class*="__container"] {
+	max-width: 1300px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 30vh;
+}
+
+
+// !========================================================== STYLE ==============================================================
+
+
+.main {
+
+	// .main__container
+
+	&__container {
+	}
+}
+.btn {
+	
+
+	// .btn__open
+
+	&__open {
+		background-color: black;
+		color: white;
+		padding: 20px 25px;
+		border-radius: 20px;
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	// .btn__close
+
+	&__close {
+		background-color: black;
+		color: white;
+		padding: 10px 25px;
+		border-radius: 20px;
+		font-size: 15px;
+		font-weight: 600;	
+	}
+}
+.modal {
+
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	transform: translate(0px, -100%);
+
+	
+
+	&.modal__show {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transition: all 0.8s ease 0s;
+		transform: translate(0px, 0%)
+	}
+	
+
+
+	// .modal__content
+
+	&__content {
+		background-color: white;
+		max-width: 900px;
+		height: 200px;
+		padding: 30px 50px;
+		border-radius: 10px;
+		text-align: center;
+	}
+
+	// .modal__title
+
+	&__title {
+		font-size: 25px;
+		font-weight: 600;
+		margin: 0px 0px 20px 0px;
+	}
+
+	// .modal__text
+
+	&__text {
+		margin: 0px 0px 25px 0px;
+	}
+}
